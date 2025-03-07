@@ -51,35 +51,35 @@ boot:
   # Radxa Rock Pi 4a
 - dtb: /dtbs/rockchip/rk3399-rock-pi-4a.dtb
   dtb_overlays: null
-  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  cmdline: console=ttyFIQ0,1500000n8 quiet splash loglevel=4 rw earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk consoleblank=0 console=tty1 console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
   compatible:
     - radxa-rock-pi-4a
 
   # Radxa Rock Pi 4a plus
 - dtb: /dtbs/rockchip/rk3399-rock-pi-4a-plus.dtb
   dtb_overlays: null
-  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  cmdline: console=ttyFIQ0,1500000n8 quiet splash loglevel=4 rw earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk consoleblank=0 console=tty1 console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
   compatible:
     - radxa-rock-pi-4a-plus
 
   # Radxa Rock Pi 4b
 - dtb: /dtbs/rockchip/rk3399-rock-pi-4b.dtb
   dtb_overlays: null
-  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  cmdline: console=ttyFIQ0,1500000n8 quiet splash loglevel=4 rw earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk consoleblank=0 console=tty1 console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
   compatible:
     - radxa-rock-pi-4b
 
   # Radxa Rock Pi 4b plus
 - dtb: /dtbs/rockchip/rk3399-rock-pi-4b-plus.dtb
   dtb_overlays: null
-  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  cmdline: console=ttyFIQ0,1500000n8 quiet splash loglevel=4 rw earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk consoleblank=0 console=tty1 console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
   compatible:
     - radxa-rock-pi-4b-plus
 
   # Radxa Rock Pi 4c
 - dtb: /dtbs/rockchip/rk3399-rock-pi-4c.dtb
   dtb_overlays: null
-  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  cmdline: console=ttyFIQ0,1500000n8 quiet splash loglevel=4 rw earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk consoleblank=0 console=tty1 console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
   compatible:
     - radxa-rock-pi-4c
 
