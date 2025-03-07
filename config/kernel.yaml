@@ -43,13 +43,14 @@ kernel:
           - generic
           - apple*
           - raspberrypi*
-          - radxa-rock-pi-4*
+          - radxa-rockpi4*
         recommended: null
         experimental:
           - radxa-zero*
           - radxa-rock-3*
           - radxa-rock-4*
           - radxa-rock-5*
+          - radxa-rockpi4*
           - khadas-vim*
           - khadas-edge*
           - xunlong-orangepi-5*
