@@ -46,22 +46,22 @@ dialog_theme_config="$installer_home/dialog.conf"
 install_config="$installer_home/install.yaml"
 
 # Remote Installer URL
-remote_installer_url="https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/arch-installer"
+remote_installer_url="https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/arch-installer"
 
 # Remote Installer Config URL
-remote_installer_config_url="https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/acu_config.yaml"
+remote_installer_config_url="https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/acu_config.yaml"
 
 # Full Language list
-lang_list="https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/language.yaml"
+lang_list="https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/language.yaml"
 
 # Full Kernel list
-kernel_list="https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/kernel.yaml"
+kernel_list="https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/kernel.yaml"
 
 # Full Desktop Environment list
-de_list="https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/desktop.yaml"
+de_list="https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/desktop.yaml"
 
 # Full Post Install list
-postinstall_list="https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/postinstall.yaml"
+postinstall_list="https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/postinstall.yaml"
 
 # Ping server list for internet check
 # ping Google, Cloudflare and China Mobile DNS (for China users)
