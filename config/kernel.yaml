@@ -54,6 +54,7 @@ kernel:
           - xunlong-orangepi-5*
           - rockchip-rk3588-orangepi*
           - rockchip-rk3588s-orangepi*
+          - radxa-rockpi4*
         firmware: null
         graphics:
           - mesa
@@ -65,13 +66,12 @@ kernel:
 
       # Linux Mainline Kernel for Radxa Rock Pi 4 Series
       - base: linux-aarch64
-        description: Linux Stable Kernel
+        description: Linux Stable Kernel Minimal
         version: latest stable
         repo: null
         compatible:
           - radxa-rockpi4*
-        recommended: null
-        experimental:
+        recommended:
           - radxa-rockpi4*
         firmware: null
         graphics: null
