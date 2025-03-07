@@ -42,7 +42,7 @@ postinstall:
           - xunlong-orangepi-5*
           - rockchip-rk3588s-orangepi*
           - rockchip-rk3588-orangepi*
-          - radxa-rock-pi-4*
+          - radxa-rockpi4*
         commands: |
           echo "Disable suspend ..."
           sudo mkdir -p /usr/lib/systemd/system/sleep.conf.d
@@ -54,7 +54,7 @@ postinstall:
         category: Post-Install
         description: Enable rtc_rk808 and rockchipdrm. The 'rtc_rk808' module has to be at the start of initcpio to prevent journal corruption on boot.
         compatible:
-          - radxa-rock-pi-4*
+          - radxa-rockpi4*
         commands: |
           echo "Editing mkinitcpio.conf..."
           sed -i s/"^MODULES=()"/"MODULES=(rtc_rk808 rockchipdrm)"/g /etc/mkinitcpio.conf

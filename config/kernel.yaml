@@ -65,6 +65,21 @@ kernel:
         additional:
           - misc/grub
 
+      # Linux Mainline Kernel for Radxa Rock Pi 4 Series
+      - base: linux-aarch64
+        description: Linux Stable Kernel
+        version: latest stable
+        repo: null
+        compatible:
+          - radxa-rockpi4*
+        recommended: null
+        experimental:
+          - radxa-rockpi4*
+        firmware: null
+        graphics: null
+        video: null
+        additional: null
+
 ## Compatible with: Raspberry Pi ##
 
       # Linux Raspberry Pi Kernel
