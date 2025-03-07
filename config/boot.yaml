@@ -46,8 +46,42 @@ boot:
     - radxa-rock-2*
     - radxa-rock-3*
     - radxa-rock-4*
-    - radxa-rock-pi-4*
     - radxa-cm3*
+
+  # Radxa Rock Pi 4a
+- dtb: /dtbs/rockchip/radxa-rock-pi-4a.dtb
+  dtb_overlays: null
+  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  compatible:
+    - radxa-rock-pi-4a
+
+  # Radxa Rock Pi 4a plus
+- dtb: /dtbs/rockchip/radxa-rock-pi-4a-plus.dtb
+  dtb_overlays: null
+  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  compatible:
+    - radxa-rock-pi-4a-plus
+
+  # Radxa Rock Pi 4b
+- dtb: /dtbs/rockchip/radxa-rock-pi-4b.dtb
+  dtb_overlays: null
+  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  compatible:
+    - radxa-rock-pi-4b
+
+  # Radxa Rock Pi 4b plus
+- dtb: /dtbs/rockchip/radxa-rock-pi-4b-plus.dtb
+  dtb_overlays: null
+  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  compatible:
+    - radxa-rock-pi-4b-plus
+
+  # Radxa Rock Pi 4c
+- dtb: /dtbs/rockchip/radxa-rock-pi-4c.dtb
+  dtb_overlays: null
+  cmdline: earlycon=uart8250,mmio32,0xff1a0000 swiotlb=1 coherent_pool=1m earlyprintk console=ttyS2,1500000n8 irqchip.gicv3_pseudo_nmi=0 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1
+  compatible:
+    - radxa-rock-pi-4c
 
 # Khadas Edge Series
 - dtb: /dtbs/%PKGBASE%

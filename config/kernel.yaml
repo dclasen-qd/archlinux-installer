@@ -43,6 +43,7 @@ kernel:
           - generic
           - apple*
           - raspberrypi*
+          - radxa-rock-pi-4*
         recommended: null
         experimental:
           - radxa-zero*

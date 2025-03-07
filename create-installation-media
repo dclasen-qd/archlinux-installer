@@ -110,7 +110,7 @@ colorecho() {
 
 # Title / Heading
 title() {
-    clear
+    #clear
     echo "---------------------------------------------------------------------"
     colorecho "$BLUE" "Arch Linux Installer - Create Installation Media"
     echo "---------------------------------------------------------------------"
@@ -503,7 +503,7 @@ for arg in "$@"; do
         ;;
     -d | --dev)
         echo "Getting the latest installation script from dev ..."
-        bash <(curl -fsSL https://raw.githubusercontent.com/kwankiu/archlinux-installer/dev/archlinux-installer) ${@:2}
+        bash <(curl -fsSL https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/dev/archlinux-installer) ${@:2}
         exit 1
         ;;
     --get-pkg)
@@ -947,7 +947,7 @@ fi
 title
 
 colorecho "$GREEN" "Loading boot config list ..."
-eval $(bash <(curl -fsSL https://raw.githubusercontent.com/kwankiu/acu/$acuver/scripts/acu_parser.sh) https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/boot.yaml)
+eval $(bash <(curl -fsSL https://raw.githubusercontent.com/kwankiu/acu/$acuver/scripts/acu_parser.sh) https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/boot.yaml)
 
 for ((i = 0; i < ${#boot_dtb[@]}; i++)); do
     # Add tags
@@ -1028,7 +1028,8 @@ END
         fi
         echo "    initrd /initramfs-%PKGBASE%.img" | sudo tee -a "$boot_mount_dir/extlinux/extlinux.conf" >/dev/null
 
-        if [ -n "$bootdtb" ] && [ "$bootdtb" != "null" ]; then
+        colorecho "$BLUE" "bootdtb is set to: $bootdtb"
+        if [ -n "$bootdtb" ] && [ "$bootdtb" != "null" ]; then            
             if [[ "$bootdtb" == *".dtb" ]]; then
                 echo "    ftd $bootdtb" | sudo tee -a "$boot_mount_dir/extlinux/extlinux.conf" >/dev/null
             else
@@ -1045,6 +1046,7 @@ END
 
         if [ ! "$argbootpt" = 1 ]; then
             sudo sed -i "s| /vmlinuz| /boot/vmlinuz|" $boot_mount_dir/extlinux/extlinux.conf
+            sudo sed -i "s| /Image| /boot/Image|" $boot_mount_dir/extlinux/extlinux.conf
             sudo sed -i "s| /initramfs| /boot/initramfs|" $boot_mount_dir/extlinux/extlinux.conf
             sudo sed -i "s| /initrd| /boot/initrd|" $boot_mount_dir/extlinux/extlinux.conf
             sudo sed -i "s| /dtbs| /boot/dtbs|" $boot_mount_dir/extlinux/extlinux.conf
@@ -1072,14 +1074,14 @@ colorecho "$GREEN" "Downloading Installer ..."
 if [ "$arginstaller" == "installer" ] || [ -z "$arginstaller" ]; then
     installer_name="arch-installer"
     compiled_pkg_dir="/usr/lib/installer/packages"
-    curl -LJO https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/$installer_name
+    curl -LJO https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/$installer_name
     # Download and Copy ACU
     curl -LJO https://raw.githubusercontent.com/kwankiu/acu/$acuver/acu
     sudo chmod +x acu
     sudo cp -r acu "$root_mount_dir/usr/bin/acu"
     sudo rm -rf acu
     # Download and Copy ACU Config for TUI Installer
-    curl -LJO https://raw.githubusercontent.com/kwankiu/archlinux-installer/$branch/config/acu_config.yaml
+    curl -LJO https://raw.githubusercontent.com/dclasen-qd/archlinux-installer/$branch/config/acu_config.yaml
     sudo mkdir -p "$root_mount_dir/usr/lib/installer/.acu/config"
     sudo cp -r acu_config.yaml "$root_mount_dir/usr/lib/installer/.acu/config/config.yaml"
     sudo rm -rf acu_config.yaml

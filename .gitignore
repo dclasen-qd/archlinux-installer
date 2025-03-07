@@ -8,5 +8,8 @@
 # Ignore macOS DS_Store
 .DS_Store
 
+# Ignore intelliJ Idea Project dir
+.idea/
+
 # Ignore output folder
 out
