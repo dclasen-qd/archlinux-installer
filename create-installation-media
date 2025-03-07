@@ -1044,6 +1044,12 @@ END
         # Update pkgbase for extlinux.conf
         sudo sed -i "s|%PKGBASE%|$argkrl|" $boot_mount_dir/extlinux/extlinux.conf
 
+        # strip /linux from the dtb paths if building with Mainline Linux kernel
+        if [ "$argkrl" = "linux" ]; then
+            sudo sed -i "s|/dtbs/linux|/dtbs|" $boot_mount_dir/extlinux/extlinux.conf
+            sudo sed -i "s|/dtbo/linux|/dtbo|" $boot_mount_dir/extlinux/extlinux.conf
+        fi
+
         if [ ! "$argbootpt" = 1 ]; then
             sudo sed -i "s| /vmlinuz| /boot/vmlinuz|" $boot_mount_dir/extlinux/extlinux.conf
             sudo sed -i "s| /Image| /boot/Image|" $boot_mount_dir/extlinux/extlinux.conf
