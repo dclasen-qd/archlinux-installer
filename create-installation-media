@@ -1031,7 +1031,7 @@ END
         colorecho "$BLUE" "bootdtb is set to: $bootdtb"
         if [ -n "$bootdtb" ] && [ "$bootdtb" != "null" ]; then            
             if [[ "$bootdtb" == *".dtb" ]]; then
-                echo "    ftd $bootdtb" | sudo tee -a "$boot_mount_dir/extlinux/extlinux.conf" >/dev/null
+                echo "    fdt $bootdtb" | sudo tee -a "$boot_mount_dir/extlinux/extlinux.conf" >/dev/null
             else
                 echo "    devicetreedir $bootdtb" | sudo tee -a "$boot_mount_dir/extlinux/extlinux.conf" >/dev/null
             fi
